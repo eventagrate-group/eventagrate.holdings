@@ -29,9 +29,14 @@
   .lead{font-size:clamp(1.05rem,2vw,1.35rem); color:var(--muted); max-width:38em; margin:0 0 4rem}
   .companies{list-style:none; padding:0; margin:0; display:grid; gap:1px; background:var(--line);
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); border:1px solid var(--line)}
-  .companies li{background:var(--bg); padding:1.5rem 1.4rem}
+  .companies li{background:var(--bg)}
+  .companies a, .companies .card{display:block; padding:1.5rem 1.4rem; color:inherit; text-decoration:none; height:100%; position:relative; transition:background .15s}
+  .companies a:hover, .companies a:focus-visible{background:#16161a; outline:none}
+  .companies a::after{content:"\2197"; position:absolute; top:1.35rem; right:1.3rem; color:var(--muted); font-size:.95rem; transition:color .15s}
+  .companies a:hover::after{color:var(--accent)}
   .companies strong{display:block; font-weight:700; font-size:1.1rem; margin-bottom:.25rem}
   .companies small{color:var(--muted); font-size:.95rem}
+  .companies .card small{display:block}
   footer{padding:2rem 6vw; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem;
     display:flex; flex-wrap:wrap; gap:1rem 2rem; justify-content:space-between}
   footer a{color:var(--fg); text-decoration:none; border-bottom:1px solid var(--accent)}
@@ -45,10 +50,10 @@
     <h1>Eventagrate<span>.</span>Holdings</h1>
     <p class="lead">The parent group behind a family of companies working across live experiences, broadcast, software and gaming.</p>
     <ul class="companies">
-      <li><strong>Eventagrate</strong><small>Experiential and interactive event technology</small></li>
-      <li><strong>Streamworks</strong><small>Broadcast and OTT delivery</small></li>
-      <li><strong>Branch</strong><small>Platforms and AI solutions</small></li>
-      <li><strong>Fanhouse</strong><small>Gaming and esports</small></li>
+      <li><a href="https://www.eventagrate.com" target="_blank" rel="noopener"><strong>Eventagrate</strong><small>Experiential and interactive event technology</small></a></li>
+      <li><a href="https://streamworks.ae" target="_blank" rel="noopener"><strong>Streamworks</strong><small>Broadcast and OTT delivery</small></a></li>
+      <li><div class="card"><strong>Branch</strong><small>Platforms and AI solutions</small></div></li>
+      <li><a href="https://www.fanhouse.live" target="_blank" rel="noopener"><strong>FanHouse</strong><small>Interactive sports engagement</small></a></li>
     </ul>
   </div>
 </main>
